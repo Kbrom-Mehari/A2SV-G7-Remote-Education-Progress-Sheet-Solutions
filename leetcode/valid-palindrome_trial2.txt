@@ -1,0 +1,12 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        pal = []
+        for ch in s:
+            if ord(ch.lower()) >= 97 and ord(ch.lower()) <= 122 or ord(ch.lower()) >= 48 and ord(ch.lower()) <=57:
+                pal.append(ch.lower())
+
+        rev = pal[::-1]
+        
+        if pal == rev:
+            return True
+        return False
